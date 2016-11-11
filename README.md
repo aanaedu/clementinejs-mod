@@ -57,7 +57,7 @@ Please follow [this guide](https://scotch.io/tutorials/easy-node-authentication-
 Create a file named `.env` in the root directory. This file should contain:
 
 ```
-GOOGLE_KEY=your-client-id-here
+GOOGLE_ID=your-client-id-here
 GOOGLE_SECRET=your-client-secret-here
 MONGO_URI=mongodb://localhost:27017/clementinejs
 PORT=8080
