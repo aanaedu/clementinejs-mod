@@ -6,7 +6,7 @@
 
 Clementine.js is a lightweight boilerplate for fullstack JavaScript development which utilizes MongoDB, Express and Node.js. The boilerplate errs on the side of transparency and simplicity, making it an ideal starting point for beginner and seasoned developers alike. 
 
-The [Free Code Camp](http://www.freecodecamp.com) version of Clementine.js is meant for use when completing projects as part of the FCC curriculum. This version includes GitHub authentication using [Passport](http://passportjs.org/).
+The [Free Code Camp](http://www.freecodecamp.com) modified version of Clementine.js is meant for use when completing projects as part of the FCC curriculum. This version includes local and Google authentication using [Passport](http://passportjs.org/).
 
 ## Versions
 
@@ -14,7 +14,11 @@ There are 3 versions of Clementine.js:
 
 - [**Standard**](https://github.com/johnstonbl01/clementinejs): the simplest version of Clementine.js. Intended for those who wish for the smallest and least intrusive footprint OR to implement features on their own.
 - [**Angular**](https://github.com/johnstonbl01/clementinejs-angular): a slightly more complex version of the same application. This version employs the use of AngularJS as the front-end framework.
-- **Free Code Camp (FCC)** (this version): A modified version of the standard boilerplate that is intended for use with the [Free Code Camp](http://freecodecamp.com/) curriculum.
+- [**Free Code Camp (FCC)**](https://github.com/johnstonbl01/clementinejs-fcc.git): A modified version of the standard boilerplate that is intended for use with the [Free Code Camp](http://freecodecamp.com/) curriculum.
+
+## This version
+
+- **Free Code Camp (FCC)** (this version): A modified version of the **Free Code Camp (FCC)** boilerplate that uses **passport-local** and **passport-google-oauth** intended for use with the [Free Code Camp](http://freecodecamp.com/) curriculum.
 
 # Quick Start Guide
 
@@ -32,7 +36,7 @@ In order to use Clementine.js, you must have the following installed:
 To install Clementine.js, simply enter the below in the terminal window:
 
 ```bash
-$ git clone https://github.com/johnstonbl01/clementinejs-fcc.git your-project
+$ git clone https://github.com/aanaedu/clementinejs-mod.git your-project
 ```
 
 To install the dependencies, enter the following in your terminal:
@@ -44,17 +48,17 @@ $ npm install
 
 This will install the Clementine.js components into the `your-project` directory.
 
-### Setup GitHub Authentication
+### Setup Google Authentication
 
-Please follow [this guide](http://www.clementinejs.com/tutorials/tutorial-passport.html#GitHubAppSetup) to register the application with GitHub and get API keys / secrets.
+Please follow [this guide](https://scotch.io/tutorials/easy-node-authentication-google) to register the application with GitHub and get API keys / secrets.
 
 ### Local Environment Variables
 
 Create a file named `.env` in the root directory. This file should contain:
 
 ```
-GITHUB_KEY=your-client-id-here
-GITHUB_SECRET=your-client-secret-here
+GOOGLE_KEY=your-client-id-here
+GOOGLE_SECRET=your-client-secret-here
 MONGO_URI=mongodb://localhost:27017/clementinejs
 PORT=8080
 APP_URL=http://localhost:8080/
