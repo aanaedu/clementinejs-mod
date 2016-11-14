@@ -116,6 +116,6 @@ module.exports = function (app, passport) {
 
 	app.route('/admin')
 		.get(isLoggedInAsAdmin, function(req, res) {
-			res.render('admin', { title: 'Dashboard' });
+			res.render('dashboard', { title: 'Dashboard' });
 	});
 };
