@@ -19,7 +19,7 @@ module.exports = function (app, passport) {
 
 	function isLoggedInAsAdmin (req, res, next) {
 		if (req.isAuthenticated()) {
-			if (req.user.local.isAdmin || req.user.local.isAdmin) {
+			if (req.user.local.isAdmin || req.user.google.isAdmin) {
 	        	return next();
 	    	}
 	    }
@@ -38,7 +38,6 @@ module.exports = function (app, passport) {
 
 	app.route('/login')
 		.get(function (req, res) {
-			// res.sendFile(path + '/public/login.html');
 			res.render('login', { title:'Account Login'});
 		})
 		.post(passport.authenticate('local',  {successRedirect: '/profile',
@@ -57,7 +56,7 @@ module.exports = function (app, passport) {
 			res.render('register', { title:'Register'});
 		})
 		.post(function (req, res) {
-			var name = req.body.name;
+		    var name = req.body.name;
 		    var username = req.body.username;
 		    var email = req.body.email;
 		    var password = req.body.password;
